@@ -1,0 +1,33 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "The Odin Project's Full Stack JavaScript Course Project: Restaurant Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarnif/odin-restaurant-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarnif/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/aarnif/odin-restaurant-page#readme",
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "postcss": "^8.4.35",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.4.0",
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^3.4.1",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  }
+}
