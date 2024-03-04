@@ -1,7 +1,9 @@
 module.exports = {
-  content: ["./dist/*.html"],
+  content: ["./dist/*.html", "./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    backgroundImage: {
+      pizza: "url('assets/images/pizza.png')",
+    },
   },
   variants: {
     extend: {},
