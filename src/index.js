@@ -1,7 +1,7 @@
 import "./styles.css";
-import Home from "./components/home.js";
-import Menu from "./components/menu.js";
-import Contact from "./components/contact.js";
+import Home from "./components/Home/index.js";
+import Menu from "./components/Menu/index.js";
+import Contact from "./components/Contact/index.js";
 
 console.log("Loading index.js!");
 
