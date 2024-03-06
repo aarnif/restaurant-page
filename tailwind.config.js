@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         header: ["Pacifico", "cursive"],
-        body: ["Roboto", "sans-serif"],
+        body: ["Itim", "sans-serif"],
       },
     },
   },
