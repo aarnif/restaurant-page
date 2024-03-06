@@ -36,3 +36,9 @@ contactPage.addEventListener("click", () => {
   const contactContent = Contact();
   appendToContentDiv(contactContent);
 });
+
+window.onload = () => {
+  console.log("Window loaded!");
+  const homeContent = Home();
+  appendToContentDiv(homeContent);
+};

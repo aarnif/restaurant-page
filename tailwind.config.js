@@ -1,8 +1,20 @@
 module.exports = {
   content: ["./dist/*.html", "./src/**/*.{html,js}"],
   theme: {
-    backgroundImage: {
-      pizza: "url('assets/images/pizza.png')",
+    extend: {
+      keyframes: {
+        shade: {
+          "0%": { opacity: "0", transform: "translateY(100px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        shade: "shade 1s ease-in-out",
+      },
+      fontFamily: {
+        header: ["Pacifico", "cursive"],
+        body: ["Roboto", "sans-serif"],
+      },
     },
   },
   variants: {

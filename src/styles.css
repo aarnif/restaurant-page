@@ -3,9 +3,52 @@
 @tailwind utilities;
 
 @layer base {
-  @layer base {
-    body {
-      @apply m-0 box-border;
-    }
+  body {
+    @apply m-0 box-border font-body bg-slate-300 text-slate-800;
+  }
+  .flex-col-center {
+    @apply flex flex-col items-center;
+  }
+  .flex-row-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-row-around {
+    @apply flex justify-around items-center;
+  }
+  .flex-row-between {
+    @apply flex justify-between items-center;
+  }
+  .bg-header {
+    @apply bg-gradient-to-r from-slate-300 to-slate-400;
+  }
+  .bg-hero {
+    @apply bg-gradient-to-r from-slate-300 to-slate-400;
+  }
+  .bg-section-one {
+    @apply bg-gradient-to-r from-slate-200 to-slate-300;
+  }
+  .bg-section-two {
+    @apply bg-gradient-to-r from-slate-300 to-slate-400;
+  }
+  .bg-image {
+    @apply bg-gradient-to-r from-slate-300 to-slate-400;
+  }
+  .bg-footer {
+    @apply bg-gradient-to-r from-slate-100 to-slate-200;
+  }
+  .header-text {
+    @apply font-header text-5xl font-bold tracking-wide text-slate-800;
+  }
+  .nav-item-text {
+    @apply font-header text-2xl tracking-wide text-slate-800;
+  }
+  .sub-header-text {
+    @apply font-header text-3xl tracking-wide text-slate-800;
+  }
+  .body-text {
+    @apply font-body text-xl italic text-slate-700;
+  }
+  .nav-button {
+    @apply px-10 font-header text-3xl tracking-wide text-slate-800 hover:underline;
   }
 }
