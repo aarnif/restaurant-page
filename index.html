@@ -7,26 +7,137 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Itim:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
     </style>
+    <script
+      src="https://kit.fontawesome.com/20a1279a33.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer="defer" src="main.js"></script>
   </head>
   <body>
-    <header class="relative flex-row-between p-6 shadow-xl bg-header">
-      <h1 class="flex-grow px-10 header-text">Pizzeria Luna</h1>
-      <nav class="flex-row-around">
-        <ul id="nav-items" class="flex-grow flex-row-around text-2xl">
-          <li id="home">
-            <button class="nav-button">Home</button>
-          </li>
-          <li id="menu">
-            <button class="nav-button">Menu</button>
-          </li>
-          <li id="contact">
-            <button class="nav-button">Contact</button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div id="content" class="h-[100vh] w-full flex-col-center"></div>
+    <div id="wrapper">
+      <header class="relative w-full flex-row-between p-6 shadow-xl bg-header">
+        <h1 class="flex-grow px-10 header1">Pizzeria Luna</h1>
+        <nav class="flex-row-around">
+          <ul id="nav-items" class="flex-grow flex-row-around text-2xl">
+            <li id="home">
+              <button class="nav-button">Home</button>
+            </li>
+            <li id="menu">
+              <button class="nav-button">Menu</button>
+            </li>
+            <li id="contact">
+              <button class="nav-button">Contact</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="content" class="w-full flex-col-center"></div>
+
+      <footer class="w-full flex-row-center py-8 bg-footer">
+        <div class="w-full flex-col-center">
+          <div class="w-full flex-row-center">
+            <div class="max-w-[1200px] flex-grow flex-row-around">
+              <div class="max-w-[400px] flex-grow flex-col-center items-start">
+                <h2 class="w-full header3 mb-4">Address</h2>
+                <ul class="flex-col-center">
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Restaurant Row, Times Square</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">374 W 46th Street</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">New York, NY 10036</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">United States</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">(212) FAKE-PHONE-NUMBER</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">fake.address@pizzeria-luna.com</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <ul id="social-media-icons" class="flex-row-center">
+                      <li class="pt-4 pr-8">
+                        <a href="https://www.facebook.com" target="_blank">
+                          <i
+                            class="fa-brands fa-facebook fa-2xl"
+                            title="facebook"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="pt-4 pr-8">
+                        <a href="https://www.instagram.com" target="_blank">
+                          <i
+                            class="fa-brands fa-instagram fa-2xl"
+                            title="instagram"
+                          ></i>
+                        </a>
+                      </li>
+                      <li class="pt-4 pr-8">
+                        <a href="https://www.twitter.com" target="_blank">
+                          <i
+                            class="fa-brands fa-twitter fa-2xl"
+                            title="twitter"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="max-w-[400px] flex-grow flex-col-center items-start">
+                <h2 class="w-full header3 mb-4">Opening Hours</h2>
+                <ul class="flex-col-center">
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Sunday:</p>
+                    <p class="body-text">Closed</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Monday:</p>
+                    <p class="body-text">Closed</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Tuesday:</p>
+                    <p class="body-text">9:00 AM - 10:00 PM</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Wednesday:</p>
+                    <p class="body-text">9:00 AM - 10:00 PM</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Thursday:</p>
+                    <p class="body-text">9:00 AM - 10:00 PM</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Friday:</p>
+                    <p class="body-text">9:00 AM - 11:00 PM</p>
+                  </li>
+                  <li class="w-full flex-row-between">
+                    <p class="body-text pr-4">Saturday:</p>
+                    <p class="body-text">11:00 AM - 12:00 PM</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="flex-row-center mt-8">
+            <div id="footer-text" class="header3">Created By aarnif</div>
+            <a
+              href="https://github.com/aarnif"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-github fa-2xl px-4" title="GitHub"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
     <dialog id="modal">
       <div class="w-full h-full flex-col-center justify-around">
         <h2 class="text-3xl text-center">Thanks for the feedback!</h2>
