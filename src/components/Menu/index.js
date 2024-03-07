@@ -17,8 +17,7 @@ const MenuItem = (name, ingredients, price, backgroundColor) => {
   menuItemContainerOne.className = "flex-grow";
 
   const menuItemHeader = document.createElement("h2");
-  menuItemHeader.className =
-    "sub-header-text border-b-2 border-slate-700 w-full";
+  menuItemHeader.className = "header3 border-b-2 border-slate-700 w-full";
   menuItemHeader.textContent = name;
 
   menuItemContainerOne.appendChild(menuItemHeader);
@@ -34,7 +33,7 @@ const MenuItem = (name, ingredients, price, backgroundColor) => {
   menuItemContainerTwo.className = "min-w-[100px] mx-8";
 
   const menuItemPrice = document.createElement("p");
-  menuItemPrice.className = "sub-header-text";
+  menuItemPrice.className = "header2";
   menuItemPrice.textContent = `${price}`;
   menuItemContainerTwo.appendChild(menuItemPrice);
 
@@ -53,7 +52,7 @@ const MenuItems = (header, menuItems) => {
   menuItemsContainer.className = "w-full flex-col-center py-20";
 
   const menuItemsHeader = document.createElement("h1");
-  menuItemsHeader.className = "w-full py-10 header-text text-center";
+  menuItemsHeader.className = "w-full py-10 header2 text-center";
   menuItemsHeader.textContent = header;
 
   menuItemsContainer.appendChild(menuItemsHeader);

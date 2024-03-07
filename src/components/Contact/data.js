@@ -7,6 +7,12 @@ export const address = [
   "fake.address@pizzeria-luna.com",
 ];
 
+export const socialMedia = [
+  { platform: "Facebook", link: "https://www.facebook.com" },
+  { platform: "Instagram", link: "https://www.instagram.com" },
+  { platform: "Twitter", link: "https://www.twitter.com" },
+];
+
 export const openingHours = [
   { day: "Sunday", hours: "Closed" },
   { day: "Monday", hours: "Closed" },

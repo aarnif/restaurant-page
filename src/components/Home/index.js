@@ -29,7 +29,7 @@ const Section = (textOrImageOne, textOrImageTwo, backgroundColor) => {
 const textBox = (textHeader, textArray) => {
   const textBox = document.createElement("div");
   const textBoxHeader = document.createElement("h2");
-  textBoxHeader.className = "h-[100px] pt-4 sub-header-text text-center";
+  textBoxHeader.className = "h-[100px] pt-4 header2 text-center";
   textBoxHeader.textContent = textHeader;
 
   textBox.appendChild(textBoxHeader);
@@ -44,7 +44,7 @@ const textBox = (textHeader, textArray) => {
 
 const imageBox = (backGround) => {
   const imageBox = document.createElement("div");
-  imageBox.className = `w-full h-full flex-row-center ${backGround} sub-header-text`;
+  imageBox.className = `w-full h-full flex-row-center ${backGround} header2`;
   imageBox.textContent = "Image";
   return imageBox;
 };

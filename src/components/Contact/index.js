@@ -1,6 +1,29 @@
 import Hero from "../hero";
-import { address, openingHours } from "./data";
+import { address, socialMedia, openingHours } from "./data";
 import contactFormSection from "./contactForm";
+
+const socialMediaIcons = () => {
+  const socialMediaIconsList = document.createElement("ul");
+  socialMediaIconsList.className = "w-full flex-row-center justify-start";
+
+  socialMedia.forEach((socialMedia) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    const i = document.createElement("i");
+
+    li.className = "pt-4 px-4";
+    a.href = socialMedia.link;
+    a.target = "_blank";
+
+    i.className = `fa-brands fa-${socialMedia.platform.toLowerCase()} fa-2xl`;
+
+    a.appendChild(i);
+    li.appendChild(a);
+    socialMediaIconsList.appendChild(li);
+  });
+
+  return socialMediaIconsList;
+};
 
 const addressSection = () => {
   const addressContainer = document.createElement("div");
@@ -8,7 +31,7 @@ const addressSection = () => {
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full sub-header-text mb-8";
+  h2.className = "w-full header2 mb-8";
   h2.textContent = "Address";
 
   const ul = document.createElement("ul");
@@ -27,7 +50,8 @@ const addressSection = () => {
 
   addressContainer.appendChild(h2);
   addressContainer.appendChild(ul);
-
+  const socialMediaIconsList = socialMediaIcons();
+  addressContainer.appendChild(socialMediaIconsList);
   return addressContainer;
 };
 
@@ -37,7 +61,7 @@ const openingHoursSection = () => {
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full sub-header-text my-8";
+  h2.className = "w-full header2 my-8";
   h2.textContent = "Opening Hours";
 
   const ul = document.createElement("ul");
