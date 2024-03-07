@@ -51,4 +51,22 @@
   .nav-button {
     @apply px-10 font-header text-3xl tracking-wide text-slate-800 hover:underline;
   }
+  .form-label {
+    @apply font-body text-xl tracking-wide text-slate-800;
+  }
+  .form-input {
+    @apply w-full h-12 p-4 font-body text-xl text-slate-800 bg-slate-200 border-2 border-slate-300 rounded-md hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-400;
+  }
+  .form-text-area {
+    @apply w-full h-32 p-4 font-body text-xl text-slate-800 bg-slate-200 border-2 border-slate-300 rounded-md hover:bg-gray-300 focus:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-400;
+  }
+  .button {
+    @apply w-36 h-14 flex-row-center p-4 font-header text-3xl tracking-wide text-slate-800 bg-slate-200 rounded-md hover:bg-slate-500 active:scale-95 transition ease-in-out delay-150;
+  }
+  dialog[open] {
+    @apply w-[400px] h-[180px] flex-col-center justify-center bg-slate-300 rounded-md;
+  }
+  dialog::backdrop {
+    @apply bg-black bg-opacity-70;
+  }
 }
