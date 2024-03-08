@@ -9,9 +9,9 @@ import {
 
 const MenuItem = (name, ingredients, price, backgroundColor) => {
   const menuItem = document.createElement("li");
-  menuItem.className = `w-full flex-row-center p-8 ${backgroundColor}`;
+  menuItem.className = `w-full flex-row-center`;
   const menuItemContainer = document.createElement("div");
-  menuItemContainer.className = "max-w-[800px] flex-grow flex-row-between";
+  menuItemContainer.className = `max-w-[1000px] flex-grow flex-row-between p-8 ${backgroundColor}`;
 
   const menuItemContainerOne = document.createElement("div");
   menuItemContainerOne.className = "flex-grow";
@@ -65,7 +65,7 @@ const MenuItems = (header, menuItems) => {
       item.name,
       item?.ingredients ? item.ingredients : item.type,
       item.price,
-      i % 2 === 0 ? "bg-section-one" : "bg-section-two"
+      i % 2 === 0 ? "" : "bg-section-two"
     );
     menuItemsList.appendChild(menuItem);
   });
@@ -82,7 +82,7 @@ const Menu = () => {
   menuPage.setAttribute("id", "menu-page");
   menuPage.className = "w-full flex-col-center animate-shade";
 
-  const heroImageDiv = Hero();
+  const heroImageDiv = Hero("Menu");
   menuPage.appendChild(heroImageDiv);
 
   const menuContent = document.createElement("div");

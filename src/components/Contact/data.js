@@ -4,7 +4,7 @@ export const address = [
   "New York, NY 10036",
   "United States",
   "(212) FAKE-PHONE-NUMBER",
-  "fake.address@pizzeria-luna.com",
+  "fake.address@velluto-rosso.com",
 ];
 
 export const socialMedia = [

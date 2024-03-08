@@ -73,7 +73,7 @@ const ContactForm = () => {
   form.className = "w-full h-full flex-col-center justify-around";
 
   const h2 = document.createElement("h2");
-  h2.className = "w-full header2 mb-8";
+  h2.className = "w-full header3 mb-8";
   h2.textContent = "Contact Us";
 
   const formRowOne = formRow([

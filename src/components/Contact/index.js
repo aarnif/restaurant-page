@@ -31,7 +31,7 @@ const addressSection = () => {
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full header2 mb-8";
+  h2.className = "w-full header3 mb-8";
   h2.textContent = "Address";
 
   const ul = document.createElement("ul");
@@ -61,7 +61,7 @@ const openingHoursSection = () => {
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full header2 my-8";
+  h2.className = "w-full header3 my-8";
   h2.textContent = "Opening Hours";
 
   const ul = document.createElement("ul");
@@ -92,7 +92,7 @@ const openingHoursSection = () => {
 const locationSection = () => {
   const locationBoxContainer = document.createElement("div");
   locationBoxContainer.className =
-    "relative max-w-[750px] h-full flex-grow flex-row-between border-2 border-slate-400 rounded-md overflow-hidden";
+    "relative max-w-[750px] h-[500px] flex-grow flex-row-between border-2 border-slate-400 rounded-md overflow-hidden";
 
   const iframe = document.createElement("iframe");
   iframe.src =
@@ -139,7 +139,7 @@ const contactDetailsAndLocationSection = () => {
 
   const contactDetailsAndLocationContent = document.createElement("div");
   contactDetailsAndLocationContent.className =
-    "flex-grow max-w-[1200px] h-[500px] flex-row-center";
+    "flex-grow max-w-[1200px] flex-row-center";
 
   const contactDetailsContainer = contactDetailsSection();
 
@@ -161,7 +161,7 @@ const Contact = () => {
   contactPage.setAttribute("id", "contact-page");
   contactPage.className = "w-full flex-col-center animate-shade";
 
-  const heroImageDiv = Hero();
+  const heroImageDiv = Hero("Contact");
   contactPage.appendChild(heroImageDiv);
 
   const contactDetailsAndLocationContainer = contactDetailsAndLocationSection();

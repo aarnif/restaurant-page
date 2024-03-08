@@ -12,7 +12,8 @@ module.exports = {
         shade: "shade 1s ease-in-out",
       },
       fontFamily: {
-        header: ["Pacifico", "cursive"],
+        name: ["Blacksword", "sans-serif"],
+        header: ["Pacifico", "sans-serif"],
         body: ["Itim", "sans-serif"],
       },
       backgroundImage: {

@@ -65,13 +65,13 @@ const Home = () => {
   homePage.id = "home-page";
   homePage.className = "w-full flex-col-center animate-shade";
 
-  const heroImageDiv = Hero();
+  const heroImageDiv = Hero("A slice of Italy in every bite.");
   homePage.appendChild(heroImageDiv);
 
   const sections = [
     [
       textSection(
-        "Savor the Moonlit Magic with Every Slice!",
+        "Where Every Slice is a Taste of Elegance.",
         firstSectionText
       ),
       imageSection(pizzaOven),

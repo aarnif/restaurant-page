@@ -1,11 +1,13 @@
-const Hero = () => {
+const Hero = (heroText) => {
   const heroImageContainer = document.createElement("div");
   heroImageContainer.className = `relative w-full h-[700px] flex-row-center bg-restaurant bg-center bg-cover shadow-2xl header1`;
 
-  const heroLogoContainer = document.createElement("div");
-  heroLogoContainer.className = "flex-grow max-w-[600px]";
+  const heroTextContainer = document.createElement("div");
+  heroTextContainer.className = "max-w-[800px] flex-grow flex-row-center";
+  heroTextContainer.textContent = heroText;
 
-  heroImageContainer.appendChild(heroLogoContainer);
+  heroImageContainer.appendChild(heroTextContainer);
+
   return heroImageContainer;
 };
 
