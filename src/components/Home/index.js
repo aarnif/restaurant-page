@@ -1,25 +1,21 @@
 import Hero from "../hero";
 import { firstSectionText, secondSectionText } from "./data.js";
+import pizzaOven from "../../assets/images/pizza-oven.png";
+import terrace from "../../assets/images/terrace.png";
 
-const Section = (textOrImageOne, textOrImageTwo, backgroundColor) => {
-  console.log(textOrImageOne, textOrImageTwo);
+const Section = (
+  textOrImageContainerOne,
+  textOrImageContainerTwo,
+  backgroundColor
+) => {
   const section = document.createElement("section");
-  section.className = `w-full flex-row-center p-20 bg-section ${backgroundColor}`;
+  section.className = `w-full flex-row-center p-20 ${backgroundColor}`;
 
   const div = document.createElement("div");
-  div.className = "max-w-[1500px] flex-grow flex-row-center";
+  div.className = "max-w-[1600px] flex-grow flex-row-center";
 
-  const containerLeft = document.createElement("div");
-  containerLeft.className =
-    "flex-grow max-w-[750px] h-[600px] flex-row-center items-start";
-  containerLeft.appendChild(textOrImageOne);
-  div.appendChild(containerLeft);
-
-  const containerRight = document.createElement("div");
-  containerRight.className =
-    "max-w-[750px] h-[600px] flex-grow flex-row-center items-start";
-  containerRight.appendChild(textOrImageTwo);
-  div.appendChild(containerRight);
+  div.appendChild(textOrImageContainerOne);
+  div.appendChild(textOrImageContainerTwo);
 
   section.appendChild(div);
 
@@ -42,11 +38,25 @@ const textBox = (textHeader, textArray) => {
   return textBox;
 };
 
-const imageBox = (backGround) => {
-  const imageBox = document.createElement("div");
-  imageBox.className = `w-full h-full flex-row-center ${backGround} header2`;
-  imageBox.textContent = "Image";
-  return imageBox;
+const textSection = (textHeader, textArray) => {
+  const textContainer = document.createElement("div");
+  textContainer.className =
+    "flex-grow max-w-[800px] flex-row-center items-start";
+  const textContent = textBox(textHeader, textArray);
+  textContainer.appendChild(textContent);
+
+  return textContainer;
+};
+
+const imageSection = (imageUrl) => {
+  const imageContainer = document.createElement("div");
+  imageContainer.className =
+    "flex-grow max-w-[800px] h-[600px] flex-grow flex-row-center items-start rounded-md shadow-xl overflow-hidden";
+  const image = document.createElement("img");
+  image.className = `w-full h-full object-cover`;
+  image.src = imageUrl;
+  imageContainer.appendChild(image);
+  return imageContainer;
 };
 
 const Home = () => {
@@ -60,10 +70,13 @@ const Home = () => {
 
   const sections = [
     [
-      textBox("Savor the Moonlit Magic with Every Slice!", firstSectionText),
-      imageBox("bg-image"),
+      textSection(
+        "Savor the Moonlit Magic with Every Slice!",
+        firstSectionText
+      ),
+      imageSection(pizzaOven),
     ],
-    [imageBox("bg-image"), textBox("Our Story", secondSectionText)],
+    [imageSection(terrace), textSection("Our Story", secondSectionText)],
   ];
 
   sections.forEach((section, i) => {

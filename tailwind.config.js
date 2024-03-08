@@ -15,6 +15,10 @@ module.exports = {
         header: ["Pacifico", "cursive"],
         body: ["Itim", "sans-serif"],
       },
+      backgroundImage: {
+        pizza: "url('assets/images/pizza-oven.png')",
+        restaurant: "url('assets/images/restaurant.png')",
+      },
     },
   },
   variants: {
