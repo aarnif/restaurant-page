@@ -30,7 +30,7 @@ const MenuItem = (name, ingredients, price, backgroundColor) => {
   menuItemContainer.appendChild(menuItemContainerOne);
 
   const menuItemContainerTwo = document.createElement("div");
-  menuItemContainerTwo.className = "min-w-[100px] mx-8";
+  menuItemContainerTwo.className = "w-[150px] ml-8";
 
   const menuItemPrice = document.createElement("p");
   menuItemPrice.className = "header2";

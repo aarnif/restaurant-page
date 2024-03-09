@@ -1,2 +1,41 @@
-# odin-restaurant-page
-The Odin Project's Full Stack JavaScript Course Project: Restaurant Page
+# Restaurant Page
+
+This is a web page for a restaurant built with HTML, Tailwind CSS and JavaScript.
+The project is part of the [The Odin Project's](https://www.theodinproject.com/) Full Stack JavaScript Course.
+
+## Features
+
+- Contains a home page with information about the restaurant.
+- Contains a menu page with the restaurant's menu.
+- Contains a contact page with the restaurant's contact information.
+
+## Live Preview
+
+[RESTAURANT PAGE](https://aarnif.github.io/odin-restaurant-page/)
+
+## Technologies
+
+- HTML
+- Tailwind CSS
+- JavaScript
+
+## Image
+
+![Index Page](src/assets/images/page.png)
+Image of the home page.
+
+## Instructions
+
+```
+HTTPS - git clone https://github.com/aarnif/odin-restaurant-page.git
+
+SSH - git clone git@github.com:aarnif/odin-restaurant-page.git
+
+cd odin-restaurant-page
+
+npm install
+
+npm run dev # For development
+
+npm run build # For production
+```
