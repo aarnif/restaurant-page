@@ -1,7 +1,6 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -29,5 +28,13 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+  performance: {
+    maxAssetSize: 1000000,
+    maxEntrypointSize: 1000000,
+    hints: "error",
+    assetFilter: function (assetFilename) {
+      return !assetFilename.endsWith(".png");
+    },
   },
 };
