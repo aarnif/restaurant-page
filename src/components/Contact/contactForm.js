@@ -33,7 +33,7 @@ const formItem = (
 
 const formRow = (formItems) => {
   const ul = document.createElement("ul");
-  ul.className = "w-full flex-row-center";
+  ul.className = "w-full flex-col-center lg:flex-row";
 
   formItems.forEach((formItem) => {
     ul.appendChild(formItem);
@@ -73,7 +73,7 @@ const ContactForm = () => {
   form.className = "w-full h-full flex-col-center justify-around";
 
   const h2 = document.createElement("h2");
-  h2.className = "w-full header3 mb-8";
+  h2.className = "w-full header3 mb-8 text-center xl:text-left";
   h2.textContent = "Contact Us";
 
   const formRowOne = formRow([

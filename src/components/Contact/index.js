@@ -61,7 +61,7 @@ const openingHoursSection = () => {
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full header3 my-8";
+  h2.className = "w-full header3 mb-8 xl:my-8";
   h2.textContent = "Opening Hours";
 
   const ul = document.createElement("ul");
@@ -92,7 +92,7 @@ const openingHoursSection = () => {
 const locationSection = () => {
   const locationBoxContainer = document.createElement("div");
   locationBoxContainer.className =
-    "relative max-w-[750px] h-[500px] flex-grow flex-row-between border-2 border-slate-400 rounded-md overflow-hidden";
+    "relative min-w-[700px] max-w-[750px] h-[500px] flex-grow flex-row-between border-2 border-slate-400 rounded-md overflow-hidden";
 
   const iframe = document.createElement("iframe");
   iframe.src =
@@ -122,7 +122,7 @@ const locationSection = () => {
 const contactDetailsSection = () => {
   const contactDetailsContainer = document.createElement("div");
   contactDetailsContainer.className =
-    "flex-grow max-w-[500px] h-full flex-grow flex-col-center items-start";
+    "flex-grow h-full flex-grow flex-row-center items-start mb-8 xl:mb-0 xl:flex-col xl:max-w-[500px]";
 
   const addressContainer = addressSection();
   const openingHoursContainer = openingHoursSection();
@@ -139,7 +139,7 @@ const contactDetailsAndLocationSection = () => {
 
   const contactDetailsAndLocationContent = document.createElement("div");
   contactDetailsAndLocationContent.className =
-    "flex-grow max-w-[1200px] flex-row-center";
+    "flex-grow max-w-[1200px] flex-col-center xl:flex-row";
 
   const contactDetailsContainer = contactDetailsSection();
 

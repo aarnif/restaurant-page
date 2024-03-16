@@ -12,7 +12,7 @@ const Section = (
   section.className = `w-full flex-row-center p-20 ${backgroundColor}`;
 
   const div = document.createElement("div");
-  div.className = "max-w-[1600px] flex-grow flex-row-center";
+  div.className = "max-w-[1600px] flex-grow flex-col-center 2xl:flex-row";
 
   div.appendChild(textOrImageContainerOne);
   div.appendChild(textOrImageContainerTwo);
@@ -51,7 +51,7 @@ const textSection = (textHeader, textArray) => {
 const imageSection = (imageUrl) => {
   const imageContainer = document.createElement("div");
   imageContainer.className =
-    "flex-grow max-w-[800px] h-[600px] flex-grow flex-row-center items-start rounded-md shadow-xl overflow-hidden";
+    "flex-grow min-w-[700px] max-w-[800px] h-[600px] flex-row-center items-start rounded-md shadow-xl overflow-hidden";
   const image = document.createElement("img");
   image.className = `w-full h-full object-cover`;
   image.src = imageUrl;
