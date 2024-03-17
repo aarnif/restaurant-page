@@ -10,6 +10,19 @@ const homePage = document.getElementById("home");
 const menuPage = document.getElementById("menu");
 const contactPage = document.getElementById("contact");
 
+const showHeaderAnimation = () => {
+  const header = document.getElementById("header");
+  header.classList.add("animate-opacity");
+  header.style.opacity = "0";
+  setTimeout(() => {
+    header.style.opacity = "1";
+  }, 1000);
+
+  setTimeout(() => {
+    header.classList.remove("animate-opacity");
+  }, 1200);
+};
+
 const emptyContentDiv = () => {
   content.innerHTML = "";
 };
@@ -17,6 +30,8 @@ const emptyContentDiv = () => {
 const appendToContentDiv = (element) => {
   emptyContentDiv();
   content.appendChild(element);
+  showHeaderAnimation();
+  window.scrollTo(0, 0);
 };
 
 homePage.addEventListener("click", () => {
@@ -39,6 +54,6 @@ contactPage.addEventListener("click", () => {
 
 window.onload = () => {
   console.log("Window loaded!");
-  const homeContent = Contact();
+  const homeContent = Home();
   appendToContentDiv(homeContent);
 };

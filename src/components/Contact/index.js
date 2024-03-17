@@ -11,11 +11,12 @@ const socialMediaIcons = () => {
     const a = document.createElement("a");
     const i = document.createElement("i");
 
-    li.className = "pt-4 px-4";
+    li.className =
+      "mt-4 mx-4 h-12 w-12 flex-row-center rounded-full hover:bg-gray-900 active:scale-95 transition ease-in-out duration-300";
     a.href = socialMedia.link;
     a.target = "_blank";
 
-    i.className = `fa-brands fa-${socialMedia.platform.toLowerCase()} fa-2xl`;
+    i.className = `fa-brands fa-${socialMedia.platform.toLowerCase()} fa-2xl active:scale-95 transition ease-in-out duration-300`;
 
     a.appendChild(i);
     li.appendChild(a);
@@ -159,7 +160,7 @@ const Contact = () => {
   console.log("Loading contact page!");
   const contactPage = document.createElement("div");
   contactPage.setAttribute("id", "contact-page");
-  contactPage.className = "w-full flex-col-center animate-shade";
+  contactPage.className = "w-full flex-col-center bg-section-one animate-shade";
 
   const heroImageDiv = Hero("Contact");
   contactPage.appendChild(heroImageDiv);

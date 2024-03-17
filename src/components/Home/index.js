@@ -66,6 +66,7 @@ const Home = () => {
   homePage.className = "w-full flex-col-center animate-shade";
 
   const heroImageDiv = Hero("A slice of Italy in every bite.");
+
   homePage.appendChild(heroImageDiv);
 
   const sections = [
