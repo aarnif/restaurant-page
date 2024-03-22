@@ -1,7 +1,7 @@
 import "./styles.css";
-import Home from "./components/Home/index.js";
-import Menu from "./components/Menu/index.js";
-import Contact from "./components/Contact/index.js";
+import Home from "./modules/Home/index.js";
+import Menu from "./modules/Menu/index.js";
+import Contact from "./modules/Contact/index.js";
 
 console.log("Loading index.js!");
 
@@ -54,6 +54,6 @@ contactPage.addEventListener("click", () => {
 
 window.onload = () => {
   console.log("Window loaded!");
-  const homeContent = Home();
+  const homeContent = Menu();
   appendToContentDiv(homeContent);
 };

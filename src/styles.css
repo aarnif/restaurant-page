@@ -74,6 +74,12 @@
   .button {
     @apply w-36 h-14 flex-row-center p-4 font-header text-3xl tracking-wide text-shadow text-red-500 bg-gray-700 rounded-md hover:bg-gray-800 active:scale-95 transition ease-in-out delay-150;
   }
+  .menu-item {
+    @apply text-2xl;
+  }
+  .menu-item-show {
+    @apply bg-gray-900;
+  }
   .dialog-button {
     @apply w-36 h-14 flex-row-center p-4 font-header text-3xl tracking-wide text-shadow text-red-500 bg-gray-700 rounded-md hover:bg-gray-900 active:scale-95 transition ease-in-out delay-150;
   }
