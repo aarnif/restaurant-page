@@ -34,26 +34,31 @@ const appendToContentDiv = (element) => {
   window.scrollTo(0, 0);
 };
 
-homePage.addEventListener("click", () => {
+const loadHomePage = () => {
   console.log("Clicked home page link.");
   const homeContent = Home();
   appendToContentDiv(homeContent);
-});
+};
 
-menuPage.addEventListener("click", () => {
+const loadMenuPage = () => {
   console.log("Clicked menu page link.");
   const menuContent = Menu();
   appendToContentDiv(menuContent);
-});
+};
 
-contactPage.addEventListener("click", () => {
+const loadContactPage = () => {
   console.log("Clicked contact page link.");
   const contactContent = Contact();
   appendToContentDiv(contactContent);
-});
+};
+
+homePage.addEventListener("click", loadHomePage);
+
+menuPage.addEventListener("click", loadMenuPage);
+
+contactPage.addEventListener("click", loadContactPage);
 
 window.onload = () => {
   console.log("Window loaded!");
-  const homeContent = Menu();
-  appendToContentDiv(homeContent);
+  loadHomePage();
 };

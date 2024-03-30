@@ -6,7 +6,7 @@ The project is part of the [The Odin Project's](https://www.theodinproject.com/)
 ## Features
 
 - Contains a home page with information about the restaurant.
-- Contains a menu page with the restaurant's menu.
+- Contains a menu page with the restaurant's menu with filtering for different dishes.
 - Contains a contact page with the restaurant's contact information.
 
 ## Live Preview
