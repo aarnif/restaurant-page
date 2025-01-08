@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aarnif/odin-restaurant-page.git"
+    "url": "git+https://github.com/aarnif/restaurant-page.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aarnif/odin-restaurant-page/issues"
+    "url": "https://github.com/aarnif/restaurant-page/issues"
   },
-  "homepage": "https://github.com/aarnif/odin-restaurant-page#readme",
+  "homepage": "https://github.com/aarnif/restaurant-page#readme",
   "devDependencies": {
     "css-loader": "^6.10.0",
     "postcss": "^8.4.35",
