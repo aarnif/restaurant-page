@@ -11,7 +11,7 @@ The project is part of the [The Odin Project's](https://www.theodinproject.com/)
 
 ## Live Preview
 
-[RESTAURANT PAGE](https://aarnif.github.io/odin-restaurant-page/)
+[RESTAURANT PAGE](https://aarnif.github.io/restaurant-page/)
 
 ## Technologies
 
@@ -27,11 +27,11 @@ Image of the home page.
 ## Instructions
 
 ```
-HTTPS - git clone https://github.com/aarnif/odin-restaurant-page.git
+HTTPS - git clone https://github.com/aarnif/restaurant-page.git
 
-SSH - git clone git@github.com:aarnif/odin-restaurant-page.git
+SSH - git clone git@github.com:aarnif/restaurant-page.git
 
-cd odin-restaurant-page
+cd restaurant-page
 
 npm install
 
