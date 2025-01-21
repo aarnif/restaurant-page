@@ -30,8 +30,8 @@ module.exports = {
     ],
   },
   performance: {
-    maxAssetSize: 1000000,
-    maxEntrypointSize: 1000000,
+    maxAssetSize: 2000000,
+    maxEntrypointSize: 2000000,
     hints: "error",
     assetFilter: function (assetFilename) {
       return !assetFilename.endsWith(".png");
