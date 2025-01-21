@@ -26,13 +26,13 @@ const Section = (index, content) => {
   const isEven = index % 2 === 0;
   const section = document.createElement("section");
   section.className = isEven
-    ? "w-full py-16 flex justify-center items-center bg-section-one"
-    : "w-full py-16 flex justify-center items-center bg-section-two";
+    ? "w-full py-8 sm:py-12 xl:py-16 flex justify-center items-center bg-section-one"
+    : "w-full py-8 sm:py-12 xl:py-16 flex justify-center items-center bg-section-two";
 
   const div = document.createElement("div");
   div.className = isEven
-    ? "max-w-[1600px] flex-grow flex flex-col flex-col-reverse 2xl:flex-row items-center"
-    : "max-w-[1600px] flex-grow flex flex-col flex-col-reverse 2xl:flex-row-reverse items-center";
+    ? "xl:max-w-[1600px] xl:h-[600px] px-4 sm:px-8 flex-grow flex flex-col flex-col-reverse xl:flex-row items-center gap-4 sm:gap-8"
+    : "xl:max-w-[1600px] xl:h-[600px] px-4 sm:px-8 flex-grow flex flex-col flex-col-reverse xl:flex-row-reverse items-center gap-4 sm:gap-8";
 
   const textContainer = textSection(content.title, content.text);
   const imageContainer = imageSection(content.imageUrl);
@@ -48,13 +48,14 @@ const Section = (index, content) => {
 const textBox = (textHeader, textArray) => {
   const textBox = document.createElement("div");
   const textBoxHeader = document.createElement("h2");
-  textBoxHeader.className = "h-[100px] pt-4 header2 text-center";
+  textBoxHeader.className = "my-4 sm:my-8 header2 text-center";
   textBoxHeader.textContent = textHeader;
 
   textBox.appendChild(textBoxHeader);
   textArray.forEach((text) => {
     const p = document.createElement("p");
-    p.className = "py-4 px-10 body-text";
+    p.className =
+      "my-4 body-text text-base sm:text-xl text-center sm:text-left";
     p.textContent = text;
     textBox.appendChild(p);
   });
@@ -63,8 +64,7 @@ const textBox = (textHeader, textArray) => {
 
 const textSection = (textHeader, textArray) => {
   const textContainer = document.createElement("div");
-  textContainer.className =
-    "flex-grow max-w-[800px] flex-row-center items-start";
+  textContainer.className = "basis-[46%] flex-row-center items-start";
   const textContent = textBox(textHeader, textArray);
   textContainer.appendChild(textContent);
 
@@ -74,7 +74,7 @@ const textSection = (textHeader, textArray) => {
 const imageSection = (imageUrl) => {
   const imageContainer = document.createElement("div");
   imageContainer.className =
-    "flex-grow min-w-[700px] max-w-[800px] h-[600px] flex-row-center items-start rounded-md shadow-xl overflow-hidden";
+    "basis-[54%] w-full h-full flex justify-center items-start rounded-md shadow-xl";
   const image = document.createElement("img");
   image.className = `w-full h-full object-cover`;
   image.src = imageUrl;

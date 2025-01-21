@@ -50,7 +50,7 @@
     @apply font-header text-2xl sm:text-4xl xl:text-5xl font-bold tracking-wide text-red-500;
   }
   .header2 {
-    @apply font-header text-4xl tracking-wide text-red-500;
+    @apply font-header text-xl sm:text-2xl xl:text-3xl tracking-wide text-red-500;
   }
   .header3 {
     @apply font-header text-3xl tracking-wide text-red-500;
