@@ -28,7 +28,8 @@ const openingHours = [
 
 const socialMediaIcons = () => {
   const socialMediaIconsList = document.createElement("ul");
-  socialMediaIconsList.className = "w-full flex items-center justify-start";
+  socialMediaIconsList.className =
+    "w-full max-w-[1400px] flex items-center justify-center xl:justify-start mb-8 sm:mb-16 px-4";
 
   socialMedia.forEach((socialMedia) => {
     const li = document.createElement("li");
@@ -57,7 +58,7 @@ const addressSection = () => {
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full header3 mb-8 text-center sm:text-left";
+  h2.className = "w-full header3 mb-4 sm:mb-8 text-center sm:text-left";
   h2.textContent = "Address";
 
   const ul = document.createElement("ul");
@@ -76,8 +77,7 @@ const addressSection = () => {
 
   addressContainer.appendChild(h2);
   addressContainer.appendChild(ul);
-  const socialMediaIconsList = socialMediaIcons();
-  // addressContainer.appendChild(socialMediaIconsList);
+
   return addressContainer;
 };
 
@@ -88,8 +88,7 @@ const openingHoursSection = () => {
 
   const h2 = document.createElement("h2");
 
-  h2.className =
-    "w-full header3 mt-8 mb-8 sm:mt-0 xl:my-8 text-center sm:text-left";
+  h2.className = "w-full header3 my-4 sm:mt-0 xl:my-8 text-center sm:text-left";
   h2.textContent = "Opening Hours";
 
   const ul = document.createElement("ul");
@@ -165,7 +164,7 @@ const contactDetailsSection = () => {
 const contactDetailsAndLocationSection = () => {
   const contactDetailsAndLocationContainer = document.createElement("div");
   contactDetailsAndLocationContainer.className =
-    "w-full flex justify-center items-center my-8 sm:my-16 xl:my-20";
+    "w-full flex justify-center items-center mt-8 sm:mt-16 xl:mt-20";
 
   const contactDetailsAndLocationContent = document.createElement("div");
   contactDetailsAndLocationContent.className =
@@ -196,11 +195,12 @@ const Contact = () => {
   contactPage.appendChild(heroImageDiv);
 
   const contactDetailsAndLocationContainer = contactDetailsAndLocationSection();
-
   contactPage.appendChild(contactDetailsAndLocationContainer);
 
-  const contactFormContainer = contactFormSection();
+  const socialMediaIconsList = socialMediaIcons();
+  contactPage.appendChild(socialMediaIconsList);
 
+  const contactFormContainer = contactFormSection();
   contactPage.appendChild(contactFormContainer);
 
   return contactPage;
