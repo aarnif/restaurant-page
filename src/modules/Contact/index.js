@@ -1,10 +1,35 @@
 import Hero from "../hero";
-import { address, socialMedia, openingHours } from "./data";
 import contactFormSection from "./contactForm";
+
+const address = [
+  "Restaurant Row, Times Square",
+  "374 W 46th Street",
+  "New York, NY 10036",
+  "United States",
+  "(212) FAKE-PHONE-NUMBER",
+  "fake.address@velluto-rosso.com",
+];
+
+const socialMedia = [
+  { platform: "Facebook", link: "https://www.facebook.com" },
+  { platform: "Instagram", link: "https://www.instagram.com" },
+  { platform: "Twitter", link: "https://www.twitter.com" },
+];
+
+const openingHours = [
+  { day: "Sunday", hours: "Closed" },
+  { day: "Monday", hours: "Closed" },
+  { day: "Tuesday", hours: "9:00 AM - 10:00 PM" },
+  { day: "Wednesday", hours: "9:00 AM - 10:00 PM" },
+  { day: "Thursday", hours: "9:00 AM - 10:00 PM" },
+  { day: "Friday", hours: "9:00 AM - 11:00 PM" },
+  { day: "Saturday", hours: "11:00 AM - 12:00 PM" },
+];
 
 const socialMediaIcons = () => {
   const socialMediaIconsList = document.createElement("ul");
-  socialMediaIconsList.className = "w-full flex-row-center justify-start";
+  socialMediaIconsList.className =
+    "w-full max-w-[1400px] flex items-center justify-center xl:justify-start mb-8 sm:mb-16 px-4";
 
   socialMedia.forEach((socialMedia) => {
     const li = document.createElement("li");
@@ -12,7 +37,7 @@ const socialMediaIcons = () => {
     const i = document.createElement("i");
 
     li.className =
-      "mt-4 mx-4 h-12 w-12 flex-row-center rounded-full hover:bg-gray-900 active:scale-95 transition ease-in-out duration-300";
+      "mt-4 mx-4 h-12 w-12 flex justify-center items-center rounded-full hover:bg-gray-900 active:scale-95 transition ease-in-out duration-300";
     a.href = socialMedia.link;
     a.target = "_blank";
 
@@ -28,21 +53,22 @@ const socialMediaIcons = () => {
 
 const addressSection = () => {
   const addressContainer = document.createElement("div");
-  addressContainer.className = "flex-grow flex-col-center items-start";
+  addressContainer.className =
+    "flex-grow w-full h-full flex flex-col justify-start items-center";
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full header3 mb-8";
+  h2.className = "w-full header3 mb-4 sm:mb-8 text-center sm:text-left";
   h2.textContent = "Address";
 
   const ul = document.createElement("ul");
-  ul.className = "flex-col-center";
+  ul.className = "w-full flex flex-col items-center";
 
   address.forEach((line) => {
     const li = document.createElement("li");
-    li.className = "w-full flex-row-between";
+    li.className = "w-full flex justify-center sm:justify-start items-center";
     const addressLine = document.createElement("p");
-    addressLine.className = "body-text px-4";
+    addressLine.className = "body-text pr-4";
     addressLine.textContent = line;
 
     li.appendChild(addressLine);
@@ -51,28 +77,28 @@ const addressSection = () => {
 
   addressContainer.appendChild(h2);
   addressContainer.appendChild(ul);
-  const socialMediaIconsList = socialMediaIcons();
-  addressContainer.appendChild(socialMediaIconsList);
+
   return addressContainer;
 };
 
 const openingHoursSection = () => {
-  const openinHoursContainer = document.createElement("div");
-  openinHoursContainer.className = "flex-grow flex-col-center items-start";
+  const openingHoursContainer = document.createElement("div");
+  openingHoursContainer.className =
+    "w-full flex-grow flex flex-col items-center";
 
   const h2 = document.createElement("h2");
 
-  h2.className = "w-full header3 mb-8 xl:my-8";
+  h2.className = "w-full header3 my-4 sm:mt-0 xl:my-8 text-center sm:text-left";
   h2.textContent = "Opening Hours";
 
   const ul = document.createElement("ul");
-  ul.className = "flex-col-center";
+  ul.className = "w-full flex flex-col items-center";
 
   openingHours.forEach((openingHour) => {
     const li = document.createElement("li");
-    li.className = "w-full flex-row-between";
+    li.className = "w-full flex justify-between items-center";
     const openingDay = document.createElement("p");
-    openingDay.className = "body-text px-4";
+    openingDay.className = "body-text pr-4";
     openingDay.textContent = `${openingHour.day}:`;
 
     const openingHours = document.createElement("p");
@@ -84,16 +110,16 @@ const openingHoursSection = () => {
     ul.appendChild(li);
   });
 
-  openinHoursContainer.appendChild(h2);
-  openinHoursContainer.appendChild(ul);
+  openingHoursContainer.appendChild(h2);
+  openingHoursContainer.appendChild(ul);
 
-  return openinHoursContainer;
+  return openingHoursContainer;
 };
 
 const locationSection = () => {
   const locationBoxContainer = document.createElement("div");
   locationBoxContainer.className =
-    "relative min-w-[700px] max-w-[750px] h-[500px] flex-grow flex-row-between border-2 border-slate-400 rounded-md overflow-hidden";
+    "relative h-[300px] sm:h-[500px] w-full flex-grow flex justify-between items-center border-2 border-slate-400 rounded-md overflow-hidden";
 
   const iframe = document.createElement("iframe");
   iframe.src =
@@ -107,10 +133,11 @@ const locationSection = () => {
   locationBoxContainer.appendChild(iframe);
 
   const warningSignContainer = document.createElement("div");
-  warningSignContainer.className = "absolute w-full flex-row-center";
+  warningSignContainer.className =
+    "absolute w-full flex justify-center items-center";
 
   const warningSign = document.createElement("span");
-  warningSign.className = "text-4xl";
+  warningSign.className = "text-xl sm:text-2xl xl:text-4xl";
   warningSign.textContent = "THIS RESTAURANT DOES NOT EXIST!";
 
   warningSignContainer.appendChild(warningSign);
@@ -123,7 +150,7 @@ const locationSection = () => {
 const contactDetailsSection = () => {
   const contactDetailsContainer = document.createElement("div");
   contactDetailsContainer.className =
-    "flex-grow h-full flex-grow flex-row-center items-start mb-8 xl:mb-0 xl:flex-col xl:max-w-[500px]";
+    "h-full w-full flex-grow flex flex-col justify-start items-start mb-8 xl:mb-0 sm:flex-row xl:flex-col xl:max-w-[400px]";
 
   const addressContainer = addressSection();
   const openingHoursContainer = openingHoursSection();
@@ -136,11 +163,12 @@ const contactDetailsSection = () => {
 
 const contactDetailsAndLocationSection = () => {
   const contactDetailsAndLocationContainer = document.createElement("div");
-  contactDetailsAndLocationContainer.className = "w-full flex-row-center my-20";
+  contactDetailsAndLocationContainer.className =
+    "w-full flex justify-center items-center mt-8 sm:mt-16 xl:mt-20";
 
   const contactDetailsAndLocationContent = document.createElement("div");
   contactDetailsAndLocationContent.className =
-    "flex-grow max-w-[1200px] flex-col-center xl:flex-row";
+    "px-4 sm:px-8 flex-grow max-w-[1400px] flex flex-col flex-col-reverse items-center xl:flex-row gap-8";
 
   const contactDetailsContainer = contactDetailsSection();
 
@@ -160,17 +188,19 @@ const Contact = () => {
   console.log("Loading contact page!");
   const contactPage = document.createElement("div");
   contactPage.setAttribute("id", "contact-page");
-  contactPage.className = "w-full flex-col-center bg-section-one animate-shade";
+  contactPage.className =
+    "w-full flex flex-col items-center bg-section-one animate-shade";
 
   const heroImageDiv = Hero("Contact");
   contactPage.appendChild(heroImageDiv);
 
   const contactDetailsAndLocationContainer = contactDetailsAndLocationSection();
-
   contactPage.appendChild(contactDetailsAndLocationContainer);
 
-  const contactFormContainer = contactFormSection();
+  const socialMediaIconsList = socialMediaIcons();
+  contactPage.appendChild(socialMediaIconsList);
 
+  const contactFormContainer = contactFormSection();
   contactPage.appendChild(contactFormContainer);
 
   return contactPage;

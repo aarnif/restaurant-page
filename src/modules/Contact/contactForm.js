@@ -9,7 +9,7 @@ const formItem = (
   inputRequired
 ) => {
   const li = document.createElement("li");
-  li.className = "w-full flex-col-center items-start py-2 px-10";
+  li.className = "w-full flex-col-center items-start py-1 px-0 sm:p-2";
 
   const label = document.createElement("label");
   label.setAttribute("for", inputId);
@@ -44,7 +44,7 @@ const formRow = (formItems) => {
 
 const formTextArea = (labelText, inputId, inputPlaceholder, inputRequired) => {
   const li = document.createElement("li");
-  li.className = "w-full flex-col-center items-start py-2 px-10";
+  li.className = "w-full flex-col-center items-start py-2 sm:py-4";
 
   const label = document.createElement("label");
   label.setAttribute("for", inputId);
@@ -52,7 +52,8 @@ const formTextArea = (labelText, inputId, inputPlaceholder, inputRequired) => {
   label.textContent = labelText;
 
   const textarea = document.createElement("textarea");
-  textarea.className = "w-full h-[300px] form-text-area";
+  textarea.className =
+    "w-full min-h-[160px] sm:min-h-[250px] max-h-[220px] sm:max-h-[350px] form-text-area";
   textarea.setAttribute("type", "text");
   textarea.id = inputId;
   textarea.setAttribute("placeholder", inputPlaceholder);
@@ -66,14 +67,15 @@ const formTextArea = (labelText, inputId, inputPlaceholder, inputRequired) => {
 
 const ContactForm = () => {
   const contactFormContainer = document.createElement("div");
-  contactFormContainer.className = "max-w-[1200px] flex-grow flex-row-center";
+  contactFormContainer.className =
+    "max-w-[1400px] flex-grow flex justify-center items-center px-4 sm:px-8";
 
   const form = document.createElement("form");
   form.id = "contact-form";
   form.className = "w-full h-full flex-col-center justify-around";
 
   const h2 = document.createElement("h2");
-  h2.className = "w-full header3 mb-8 text-center xl:text-left";
+  h2.className = "w-full header3 mb-4 sm:mb-8 text-center xl:text-left";
   h2.textContent = "Contact Us";
 
   const formRowOne = formRow([
@@ -125,12 +127,13 @@ const ContactForm = () => {
   form.appendChild(formRowThree);
 
   const submitButtonContainer = document.createElement("div");
-  submitButtonContainer.className = "w-full flex-row-center py-4";
+  submitButtonContainer.className =
+    "w-full flex justify-center items-center py-4";
 
   const submitButton = document.createElement("button");
   submitButton.setAttribute("form", "contact-form");
   submitButton.setAttribute("type", "submit");
-  submitButton.className = "button";
+  submitButton.className = "button w-full m-0 py-4 text-lg sm:text-xl";
   submitButton.textContent = "Submit";
 
   submitButtonContainer.appendChild(submitButton);
@@ -160,7 +163,8 @@ const ContactForm = () => {
 
 const contactFormSection = () => {
   const contactFormContainer = document.createElement("div");
-  contactFormContainer.className = "w-full flex-row-center mb-20";
+  contactFormContainer.className =
+    "w-full flex justify-center items-center mb-8 sm:mb-16 xl:mb-20";
 
   const contactForm = ContactForm();
 
