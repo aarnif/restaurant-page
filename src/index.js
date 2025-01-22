@@ -60,5 +60,5 @@ contactPage.addEventListener("click", loadContactPage);
 
 window.onload = () => {
   console.log("Window loaded!");
-  loadHomePage();
+  loadContactPage();
 };

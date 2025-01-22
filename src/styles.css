@@ -65,14 +65,14 @@
     @apply px-4 sm:px-6 lg:px-12 xl:px-16 font-header tracking-wide text-red-500 text-shadow hover:underline;
   }
   .form-label {
-    @apply font-body text-xl tracking-wide text-red-500;
+    @apply font-body text-base sm:text-lg xl:text-xl tracking-wide text-red-500;
   }
   .form-input {
-    @apply w-full h-12 p-4 font-body text-xl text-red-500 bg-gray-700 border-2 border-gray-600 rounded-md
+    @apply w-full h-12 p-4 font-body text-base sm:text-lg xl:text-xl text-red-500 bg-gray-700 border-2 border-gray-600 rounded-md
    hover:bg-gray-800 focus:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 autofill:bg-gray-700;
   }
   .form-text-area {
-    @apply w-full h-32 p-4 font-body text-xl text-red-500 bg-gray-700 border-2 border-gray-600 rounded-md
+    @apply w-full h-32 p-4 font-body text-base sm:text-lg xl:text-xl text-red-500 bg-gray-700 border-2 border-gray-600 rounded-md
     hover:bg-gray-800 focus:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 autofill:bg-gray-700;
   }
   .button {
