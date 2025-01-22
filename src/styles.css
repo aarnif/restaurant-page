@@ -76,10 +76,10 @@
     hover:bg-gray-800 focus:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 autofill:bg-gray-700;
   }
   .button {
-    @apply w-36 h-14 flex-row-center p-4 font-header text-3xl tracking-wide text-shadow text-red-500 bg-gray-700 rounded-md hover:bg-gray-800 active:scale-95 transition ease-in-out delay-150;
+    @apply w-24 sm:w-28 xl:w-36 flex-row-center m-2 p-2 sm:p-3 xl:p-4 font-header tracking-wide text-shadow text-red-500 bg-gray-700 rounded-md hover:bg-gray-800 active:scale-95 transition ease-in-out delay-150;
   }
   .menu-item {
-    @apply text-2xl;
+    @apply text-base sm:text-lg xl:text-2xl;
   }
   .menu-item-show {
     @apply bg-gray-900;
